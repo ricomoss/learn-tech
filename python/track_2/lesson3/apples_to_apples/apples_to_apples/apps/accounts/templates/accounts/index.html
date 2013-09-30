@@ -1,0 +1,14 @@
+<div>
+    <h1>All User Profiles</h1>
+        <h2>Total Users: {{ users.count}}</h2>
+        {% for user in users %}
+        <ul>
+            <li>Username: {{ user.username }}</li>
+            <li>First Name: {{ user.first_name }}</li>
+            <li>Last Name: {{ user.last_name }}</li>
+            <li>Email: {{ user.email }}</li>
+            <li>Permission: {{ user.get_profile.permission }}</li>
+        </ul>
+        {% endfor %}
+</div>
+

@@ -1,0 +1,27 @@
+{% block content-full %}
+<section id="login-box">
+    <h1>Apples To Apples</h1>
+    <div><form id="frm_login" method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <div><div>
+                <input id='username' name="username" type="text" placeholder="username">
+            </div></div>
+            <div><div>
+                <input id='password' name="password" type="password" placeholder="password">
+            </div></div>
+        </fieldset><fieldset>
+            <ul><li>
+                <input id="remember" type="checkbox" name="remember" value="remember">
+                <label for="remember">Remember Me</label>
+            </li></ul>
+            <input type="submit" value="Sign In">
+        </fieldset>
+    </form></div>
+    {% if messages %}
+        {% for message in messages %}
+        <section >{{ message.tags|upper }}: {{ message }}</section>
+        {% endfor %}
+    {% endif %}
+</section>
+{% endblock %}

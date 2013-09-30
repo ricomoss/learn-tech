@@ -1,0 +1,15 @@
+<h1>Add New User</h1>
+
+<form action="." method="post" class="form-horizontal">
+    {% csrf_token %}
+    <div>
+        <label>{{ field.label }}</label>
+        <div>
+            {{ field }}
+
+            {% if field.errors %}
+                <p>{{ field.errors }}</p>
+            {% endif %}
+        </div>
+    </div>
+</form>
