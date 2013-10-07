@@ -33,7 +33,6 @@ A database is a collection of tables containing structured information.  Tables 
 represent specific information to build relationships.  Below is an example heirarchy for the database
 we will be using for examples::
 
-    .. _schema_example:
     (database)
     - proton:
         (table)
@@ -103,17 +102,17 @@ who created and designed the application that uses it.
         List all the tables:
         proton=# \d
     
-        .. note::
-            You'll notice other information here but it's beyond the scope of these lessons.
-            Focus on "Name", which represents the table name.
-            
         Describe a table in more details:
         proton=# \d <table name>
         
-        .. note::
-            This will provide details for every field in the table, including information 
-            about foreign keys.  Again, some of the information provided by this command is
-            beyond the scope of these lessons.
+    .. note::
+        You'll notice other information here but it's beyond the scope of these lessons.
+        Focus on "Name", which represents the table name.
+            
+    .. note::
+        This will provide details for every field in the table, including information 
+        about foreign keys.  Again, some of the information provided by this command is
+        beyond the scope of these lessons.
 
     .. note::
         The commands listed above are proprietary to the PostgreSQL database.  For instance, in MySQL
