@@ -43,9 +43,25 @@ class AddressBook:
             err_msg = "unsupported operand type(s) for +: '{}' and '{}'"
             raise TypeError(err_msg.format(type(self), type(other)))
 
-    def _dedupe(self, content, new_content):
-        for key, value in self.content.iteritems():
-            if value == content:
-                return new_content
-        new_content[len(new_content) + 1] = content
-        return new_content
+    def __iter__(self):
+        """
+        Override the iterator to return the internal dictionaries
+        """
+        for value in self.content.itervalues():
+            yield value
+
+    def __enter__(self):
+        """
+        Define the setup for a "with" statement
+        """
+        names = list()
+        for value in self.content.itervalues():
+            names.append(
+                '{} {}'.format(value['first_name'], value['last_name']))
+        return names
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        """
+        Define tear down and suppress exceptions for "with" statement
+        """
+        return isinstance(exc_val, IndexError)

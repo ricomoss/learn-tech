@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-import sys
-sys.path.append('../')
-
 from my_classes import AddressBook
 
 
@@ -93,11 +89,3 @@ def create_address_books():
     ab2 = add_content2(ab2)
     return ab1, ab2
 
-
-def main():
-    ab1, ab2 = create_address_books()
-    ab3 = add_address_books(ab1, ab2)
-
-
-if __name__ == '__main__':
-    main()
