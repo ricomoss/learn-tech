@@ -1,4 +1,9 @@
 *.log
 *.pot
 *.pyc
-local_settings.py
+
+# Local files
+*_local.py
+
+# Project files and directories
+.idea
