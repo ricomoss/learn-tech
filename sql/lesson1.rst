@@ -143,6 +143,14 @@ Finally we have enough information to query the database.  The primary functiona
 the "SELECT" statement.  This will allow us to read from the database and organize the output for
 easy viewing, reporting and interpretation.
 
+.. note::
+    To help with readability it's helpful to turn the default pager off and show the results in an expanded
+    display.  To do this use the following commands within the PSQL CLI::
+        
+        \pset pager off
+        \x
+        
+
 Let's start with the leads_lead table.  We'll select all fields from the leads_lead table for a 
 specific lead.::
 
