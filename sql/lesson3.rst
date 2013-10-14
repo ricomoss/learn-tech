@@ -35,7 +35,7 @@ are only a small portion of the power.  We want to query from multiple tables ac
         You can use the entire table name rather than aliasing them, but that is a lot of typing.
         
         
-2.  Using Aliases Effectively
+2. Using Aliases Effectively
     The output of a '\*' query often gives too much information.  Usually you'll be interested in just a few
     fields from each table.  You can use the aliases to get those fields easily.::
     
@@ -47,7 +47,7 @@ are only a small portion of the power.  We want to query from multiple tables ac
  
     The output here has two different '*id*' fields.  This is not ambiguous to the database as we used
     aliases to distinguish them in the query.  They are still ambigous to the person reading the results!
-    We can alias the results too.
+    We can alias the results too.::
     
         SELECT l.id AS lead_id, l.sold_at, o.id AS offer_id, o.contract_id, o.product_id, o.status AS offer_status
         FROM leads_lead l
@@ -56,7 +56,7 @@ are only a small portion of the power.  We want to query from multiple tables ac
         LIMIT 5;
     
         
-3.  Chain the Joins
+3. Chain the Joins
     You can keep joining as far down the relationship chain as you want.::
     
         SELECT l.id AS lead_id, l.sold_at, o.id AS offer_id, o.contract_id,
@@ -70,7 +70,7 @@ are only a small portion of the power.  We want to query from multiple tables ac
           AND p.vertical = 'education'
         LIMIT 5;
     
-4.  Filtering with Lists
+4. Filtering with Lists
     It is quite cumbersome to filter against the same field with multiple possible values.  Instead we can use
     the *IN*.::
         
@@ -104,8 +104,8 @@ Homework...oh, no!
 
 For the next lesson you'll need to demostrate how to get the following queries:
 
-  -  What are the 10 most recent partner contracts ordered by RPL (most to least)?
-  -  How many partner contracts have RPL less than $30 and are in a group?
-  -  For the 10 most recent leads, what were the offers, contracts, products and ads associated with them?
-  -  How many active offers are being suppressed by active campaigns?
-  -  What were the reasons for the last 5 failed deliveries?
+-  What are the 10 most recent partner contracts ordered by RPL (most to least)?
+-  How many partner contracts have RPL less than $30 and are in a group?
+-  For the 10 most recent leads, what were the offers, contracts, products and ads associated with them?
+-  How many active offers are being suppressed by active campaigns?
+-  What were the reasons for the last 5 failed deliveries?
