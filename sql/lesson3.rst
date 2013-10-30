@@ -104,8 +104,8 @@ Homework...oh, no!
 
 For the next lesson you'll need to demostrate how to get the following queries:
 
--  What are the 10 most recent partner contracts ordered by RPL (most to least)?
--  How many partner contracts have RPL less than $30 and are in a group?
+-  What are the 10 most recent buyer contracts ordered by RPL (most to least)?
+-  How many buyer contracts have RPL less than $30 and are in a group?
 -  For the 10 most recent leads, what were the offers, contracts, products and ads associated with them?
--  How many active offers are being suppressed by active campaigns?
+-  What are the different types of deliveries in Proton?
 -  What were the reasons for the last 5 failed deliveries?
