@@ -21,7 +21,6 @@ My Implementation
 ==================================
 
 1. robot.py
-
     Implementation of the robot defined in the UML.  I took a few liberties since Java code can't be mapped
     completely.  Notice the lack of the Move and Heading classes.  I decided to approach it with a random
     heading given in terms of degrees from North (0 degrees).  The 'North', 'South', 'East', 'West' versions
@@ -32,7 +31,6 @@ My Implementation
 
 
 2. motor.py
-
     Implementation of the motors defined in the UML.  Due to the vague description of the mechanisms
     surrounding the motors I decided to keep them very simple.  In one instance I substitute "ROTATIONS_PER_MOVE"
     in place of "self.wheel_rotations".  I'm not sure if it's a typo, but it seemed odd to me that the distance
@@ -40,7 +38,6 @@ My Implementation
     wheel was varied, but it would have to significantly change to provide this much variance.
 
 3. tests.py
-
     As per the instructions I provided a complete set of unit tests for the robot and motors.  Once could easily
     implement integration tests by providing tests that instantiate a robot and test the interface to all the
     inherited objects. (robot.motor.get_total_distance())
