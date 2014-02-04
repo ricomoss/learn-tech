@@ -151,7 +151,7 @@ class AddressBook(object):
             return self.count() > other
         elif isinstance(other, AddressBook):
             return self.count() > other.count()
-        err_msg = 'unorderable types: {} < {}'
+        err_msg = 'unorderable types: {} > {}'
         raise TypeError(err_msg.format(type(self), type(other)))
 
     def __ge__(self, other):
@@ -163,7 +163,7 @@ class AddressBook(object):
             return self.count() >= other
         elif isinstance(other, AddressBook):
             return self.count() >= other.count()
-        err_msg = 'unorderable types: {} < {}'
+        err_msg = 'unorderable types: {} >= {}'
         raise TypeError(err_msg.format(type(self), type(other)))
 
     def __eq__(self, other):
@@ -175,7 +175,7 @@ class AddressBook(object):
             return self.count() == other
         elif isinstance(other, AddressBook):
             return self.count() == other.count()
-        err_msg = 'unorderable types: {} < {}'
+        err_msg = 'unorderable types: {} == {}'
         raise TypeError(err_msg.format(type(self), type(other)))
 
     def __ne__(self, other):
@@ -187,6 +187,6 @@ class AddressBook(object):
             return self.count() != other
         elif isinstance(other, AddressBook):
             return self.count() != other.count()
-        err_msg = 'unorderable types: {} < {}'
+        err_msg = 'unorderable types: {} != {}'
         raise TypeError(err_msg.format(type(self), type(other)))
 
