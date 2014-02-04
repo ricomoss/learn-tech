@@ -110,7 +110,7 @@ class AddressBook(object):
         """
         if exc_type is None:
             return True
-        return isinstance(exc_type, IndexError)
+        return isinstance(exc_val, IndexError)
 
     def __del__(self):
         """
