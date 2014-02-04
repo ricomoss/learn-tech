@@ -54,7 +54,7 @@ def add_content1(ab1):
 
 def add_content2(ab2):
     """
-    Add content to ab1
+    Add content to ab2
     """
     ab2.add_content({
         'first_name': 'Martha',
@@ -76,10 +76,6 @@ def add_content2(ab2):
         },
     })
     return ab2
-
-
-def add_address_books(ab1, ab2):
-    return ab1 + ab2
 
 
 def create_address_books():
