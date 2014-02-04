@@ -8,7 +8,7 @@ def create_address_book():
     return AddressBook({
         'first_name': 'Henry',
         'last_name': 'Ferguson',
-        'phone': '1234567890',
+        'phone': '(555) 123-4567',
         'email': 'henry_ferguson11882@gmail.com',
         'birthday': {
             'day': '12',
@@ -33,7 +33,7 @@ def add_content1(ab1):
     ab1.add_content({
         'first_name': 'Jeff',
         'last_name': 'Ferguson',
-        'phone': '5555555555',
+        'phone': '(555) 555-5555',
         'email': 'jeff_ferguson7272@gmail.com',
         'birthday': {
             'day': '3',
@@ -59,7 +59,7 @@ def add_content2(ab2):
     ab2.add_content({
         'first_name': 'Martha',
         'last_name': 'Ferguson',
-        'phone': '1234567890',
+        'phone': '(123) 456-7890',
         'email': 'martha_ferguson665@gmail.com',
         'birthday': {
             'day': '22',

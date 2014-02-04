@@ -18,7 +18,13 @@ def sub_dictionaries(content1, content2):
 
 
 def format_phone(value):
-    value = value.translate(None, '-()')
+    trans_map = {
+        ord('-'): None,
+        ord('('): None,
+        ord(')'): None,
+        ord(' '): None,
+    }
+    value = value.translate(trans_map)
     if len(value) > 3:
         value = value[:3] + '-' + value[3:]
         if len(value) > 7:
