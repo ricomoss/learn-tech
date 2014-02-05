@@ -11,7 +11,7 @@ def add_dictionaries(content1, content2):
 
 def sub_dictionaries(content1, content2):
     new_content = deepcopy(content1)
-    for key, val in content2.iteritems():
+    for key, val in content2.items():
         if val in new_content.values():
             del new_content[key]
     return new_content
